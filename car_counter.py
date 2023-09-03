@@ -26,14 +26,14 @@ coco_classes = [
 
 cap = cv2.VideoCapture("Cars Moving On Road Stock Footage - Free Download.mp4")
 
-cap.set(3, 1280)  # Frame genişliğini ayarla
-cap.set(4, 720)  # Frame yüksekliğini ayarla
+cap.set(3, 1280) 
+cap.set(4, 720) 
 
 
 
 
 mask = cv2.imread("region.png")
-mask = cv2.resize(mask, (1280, 720))  # mask boyutunu frame ile aynı boyuta getir
+mask = cv2.resize(mask, (1280, 720))  
 
 tracker = Sort(max_age=15,min_hits=1, iou_threshold=0.3)
 
@@ -104,7 +104,7 @@ while True:
   
 
    
-# Tüm pencereleri kapatmak ve kaynakları serbest bırakmak için
+
 cv2.destroyAllWindows()
 cap.release()   
     
